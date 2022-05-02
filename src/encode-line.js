@@ -14,25 +14,25 @@ const { NotImplementedError } = require('../extensions/index.js');
   let count = 1;
   let res = ''
   let prevLetter = string[0] || ""
-  for(let i = 1; i < string.length; i++) {
-if (string[i] === prevLetter) {
-  count += 1
-} else {
-    if (count < 2) {
-    res += `${prevLetter}`
-  } else {
-  res += `${count}${prevLetter}`
-  }
-  count = 1;
-  prevLetter = string[i]
-  }
-}
-  if (count < 2) {
-    res += `${prevLetter}`
-  } else {
+    for(let i = 1; i < string.length; i++) {
+      if (string[i] === prevLetter) {
+      count += 1
+        } else {
+            if (count < 2) {
+            res += `${prevLetter}`
+            } else {
+            res += `${count}${prevLetter}`
+            }
+      count = 1;
+      prevLetter = string[i]
+        }
+      } 
+      if (count < 2) {
+      res += `${prevLetter}`
+      } else {
       res += `${count}${prevLetter}`
       count = 1
-  }
+      }
   return res;
 }
 
