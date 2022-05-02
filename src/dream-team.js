@@ -25,12 +25,12 @@ function createDreamTeam(arrOfTeam) {
     }
   }
   let sortArr = newArr.sort();
-  console.log(sortArr)
+
   let res = ''
   for (let j = 0; j < sortArr.length; j++) {
       res += sortArr[j].slice(0, 1);
   }
-  console.log(res)
+
   return res;
 
 }
